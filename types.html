@@ -1,0 +1,263 @@
+<html><head><title>neotypes: Supported types</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="neotypes" /><meta name="description" content="Scala lightweight, type-safe, asynchronous driver for neo4j" /><meta name="og:image" content="/neotypes/img/poster.png" /><meta name="image" property="og:image" content="/neotypes/img/poster.png" /><meta name="og:title" content="neotypes: Supported types" /><meta name="title" property="og:title" content="neotypes: Supported types" /><meta name="og:site_name" content="neotypes" /><meta name="og:url" content="https://neotypes.github.io/neotypes/" /><meta name="og:type" content="website" /><meta name="og:description" content="Scala lightweight, type-safe, asynchronous driver for neo4j" /><link rel="icon" type="image/png" href="/neotypes/img/favicon.png" /><meta name="twitter:title" content="neotypes: Supported types" /><meta name="twitter:image" content="/neotypes/img/poster.png" /><meta name="twitter:description" content="Scala lightweight, type-safe, asynchronous driver for neo4j" /><meta name="twitter:card" content="summary_large_image" /><link rel="icon" type="image/png" sizes="16x16" href="/neotypes/img/favicon16x16.png" /><link rel="icon" type="image/png" sizes="24x24" href="/neotypes/img/favicon24x24.png" /><link rel="icon" type="image/png" sizes="32x32" href="/neotypes/img/favicon32x32.png" /><link rel="icon" type="image/png" sizes="48x48" href="/neotypes/img/favicon48x48.png" /><link rel="icon" type="image/png" sizes="57x57" href="/neotypes/img/favicon57x57.png" /><link rel="icon" type="image/png" sizes="60x60" href="/neotypes/img/favicon60x60.png" /><link rel="icon" type="image/png" sizes="64x64" href="/neotypes/img/favicon64x64.png" /><link rel="icon" type="image/png" sizes="70x70" href="/neotypes/img/favicon70x70.png" /><link rel="icon" type="image/png" sizes="72x72" href="/neotypes/img/favicon72x72.png" /><link rel="icon" type="image/png" sizes="76x76" href="/neotypes/img/favicon76x76.png" /><link rel="icon" type="image/png" sizes="96x96" href="/neotypes/img/favicon96x96.png" /><link rel="icon" type="image/png" sizes="114x114" href="/neotypes/img/favicon114x114.png" /><link rel="icon" type="image/png" sizes="120x120" href="/neotypes/img/favicon120x120.png" /><link rel="icon" type="image/png" sizes="128x128" href="/neotypes/img/favicon128x128.png" /><link rel="icon" type="image/png" sizes="144x144" href="/neotypes/img/favicon144x144.png" /><link rel="icon" type="image/png" sizes="150x150" href="/neotypes/img/favicon150x150.png" /><link rel="icon" type="image/png" sizes="152x152" href="/neotypes/img/favicon152x152.png" /><link rel="icon" type="image/png" sizes="196x196" href="/neotypes/img/favicon196x196.png" /><link rel="icon" type="image/png" sizes="310x310" href="/neotypes/img/favicon310x310.png" /><link rel="icon" type="image/png" sizes="310x150" href="/neotypes/img/favicon310x150.png" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /><link rel="stylesheet" href="/neotypes/highlight/styles/atom-one-light.css" /><link rel="stylesheet" href="/neotypes/css/pattern-style.css" /><link rel="stylesheet" href="/neotypes/css/style.css" /></head><body><header id="site-header"><div class="navbar-wrapper navbar-inverse"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/neotypes/" class="brand"><div class="icon-wrapper"><span>neotypes</span></div></a></div><nav class="text-right"><ul class=""><li><a href="https://github.com/neotypes/neotypes" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i><span class="hidden-xs">GitHub</span></a></li><li><a href="/neotypes/api/neotypes/index.html"><i class="fa fa-file-text"></i><span class="hidden-xs">API Documentation</span></a></li></ul></nav></div></div><div class="jumbotron" style="background-image:url('/neotypes/img/jumbotron_pattern.png')"></div><div id="horizontal-menu"><ul class="horizontal-nav"><li><a class="" href="/neotypes/">Home</a></li><li><a class="" href="/neotypes/overview.html">Overview</a></li><li><a class="" href="/neotypes/parameterized_queries.html">Parameterized Queries</a></li><li><a class=" active " href="/neotypes/types.html">Supported types</a></li><li><a class="" href="/neotypes/alternative_effects.html">Alternative effects</a></li><li><a class="" href="/neotypes/streams.html">Streaming</a></li><li><a class="" href="/neotypes/driver_session_transaction.html">Transactions</a></li></ul></div></header><main id="site-main" class="page-site-main"><section class="use"><div class="container"><div id="content"><h1 id="supported-types">Supported types</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th style="text-align: center">Query result</th>
+      <th style="text-align: center">Field of a case class</th>
+      <th style="text-align: left">Query parameter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">scala.Boolean                           </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scala.Int                               </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scala.Long                              </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scala.Double                            </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scala.Float                             </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.lang.String                        </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scala.Array[Byte]                       </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scala.Option[T] *                       </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓ <code class="highlighter-rouge">**</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scala.collection._ *                    </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓ <code class="highlighter-rouge">***</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">refined.Refined[T, P] * ****            </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cats.data.Chain[T] * *****              </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cats.data.Const[T, U] * *****           </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cats.data.NonEmptyChain[T] * *****      </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cats.data.NonEmptyList[T] * *****       </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cats.data.NonEmptyMap[String, T] * *****</code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cats.data.NonEmptySet[T] * *****        </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cats.data.NonEmptyVector[T] * *****     </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.time.Duration                      </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.time.LocalDate                     </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.time.LocalDateTime                 </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.time.LocalTime                     </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.time.Period                        </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.time.OffsetDateTime                </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.time.OffsetTime                    </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.time.ZonedDateTime                 </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">java.util.UUID                          </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">org.neo4j.driver.v1.Value               </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">org.neo4j.driver.v1.types.IsoDuration   </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">org.neo4j.driver.v1.types.Point         </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">org.neo4j.driver.v1.types.Node          </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">org.neo4j.driver.v1.types.Relationship  </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">neotypes.types.Path                     </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">shapeless.HList                         </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Tuple (1-22)                            </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">User defined case class                 </code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><code class="highlighter-rouge">*</code> Generic types are supported as long as the the <code class="highlighter-rouge">T</code> is also supported.<br />
+<code class="highlighter-rouge">**</code> <code class="highlighter-rouge">None</code> is converted into <code class="highlighter-rouge">null</code>.<br />
+<code class="highlighter-rouge">***</code> Map-like collections are supported only if their keys are of type <code class="highlighter-rouge">String</code>. Any other kind of tuples is not supported.<br />
+<code class="highlighter-rouge">****</code> Support is provided in the <strong>neotypes-refined</strong> <em>module</em>.<br />
+<code class="highlighter-rouge">*****</code> Support is provided in the <strong>neotypes-cats-data</strong> <em>module</em>.<br /></p>
+</blockquote>
+
+<h2 id="additional-types">Additional types</h2>
+
+<p>If you want to support your own types, then you would need to create your own <em>implicits</em>.</p>
+
+<ul>
+  <li>For <strong>fields of a case class</strong>, you need an instance of <code class="highlighter-rouge">neotypes.mappers.ValueMapper[T]</code>. You can create a new instace:
+    <ul>
+      <li>From scratch by instantiating it <code class="highlighter-rouge">new ValueMapper[T] { ... }</code>.</li>
+      <li>Using the helper methods on the companion object like <code class="highlighter-rouge">fromCast</code> or <code class="highlighter-rouge">instance</code>.</li>
+      <li>Casting an already existing mapper using <code class="highlighter-rouge">map</code> or <code class="highlighter-rouge">flatMap</code>.</li>
+    </ul>
+  </li>
+  <li>For <strong>query results</strong>, you need an instance of <code class="highlighter-rouge">neotypes.mappers.ResultMapper[T]</code>. You can create a new instace:
+    <ul>
+      <li>From scratch by instantiating it <code class="highlighter-rouge">new ResultMapper[T] { ... }</code>.</li>
+      <li>From a <strong>ValueMapper</strong> <code class="highlighter-rouge">ResultMapper.fromValueMapper[T]</code>.</li>
+      <li>Using the helper methods on the companion object like <code class="highlighter-rouge">instace</code>.</li>
+      <li>Casting an already existing mapper using <code class="highlighter-rouge">map</code> or <code class="highlighter-rouge">flatMap</code>.</li>
+    </ul>
+  </li>
+  <li>For <strong>query parameters</strong>, you need an instance of <code class="highlighter-rouge">neotypes.mappers.ParameterMapper[T]</code>. You can create a new instace:
+    <ul>
+      <li>Casting an already existing mapper using <code class="highlighter-rouge">contramap</code>.</li>
+    </ul>
+  </li>
+</ul>
+</div></div></section></main><footer id="site-footer"><div class="container"><div class="row"><div class="col-xs-6"><p>neotypes is designed and developed by <a href="" target="_blank" rel="noopener noreferrer">neotypes</a></p></div><div class="col-xs-6"><p class="text-right"><a href="https://github.com/neotypes/neotypes" target="_blank" rel="noopener noreferrer"><span class="fa fa-github"></span>View on GitHub</a></p></div></div><div class="row"><div class="col-xs-6"><p>Website built with <a href="https://47deg.github.io/sbt-microsites/" target="_blank" rel="noopener noreferrer">sbt-microsites</a> - © 2019 <a href="https://www.47deg.com/" target="_blank" rel="noopener noreferrer">47 Degrees</a></p></div></div></div></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/neotypes/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
+hljs.initHighlightingOnLoad();
+              </script><script>console.info('\x57\x65\x62\x73\x69\x74\x65\x20\x62\x75\x69\x6c\x74\x20\x77\x69\x74\x68\x3a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x5f\x5f\x20\x20\x20\x20\x5f\x5f\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x5f\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x5f\x20\x5f\x5f\x0a\x20\x20\x20\x5f\x5f\x5f\x5f\x5f\x2f\x20\x2f\x5f\x20\x20\x2f\x20\x2f\x5f\x20\x20\x20\x20\x20\x20\x5f\x5f\x5f\x5f\x20\x5f\x5f\x5f\x20\x20\x28\x5f\x29\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x5f\x20\x20\x5f\x5f\x5f\x5f\x5f\x28\x5f\x29\x20\x2f\x5f\x5f\x5f\x5f\x20\x20\x5f\x5f\x5f\x5f\x5f\x0a\x20\x20\x2f\x20\x5f\x5f\x5f\x2f\x20\x5f\x5f\x20\x5c\x2f\x20\x5f\x5f\x2f\x5f\x5f\x5f\x5f\x5f\x2f\x20\x5f\x5f\x20\x60\x5f\x5f\x20\x5c\x2f\x20\x2f\x20\x5f\x5f\x5f\x2f\x20\x5f\x5f\x5f\x2f\x20\x5f\x5f\x20\x5c\x2f\x20\x5f\x5f\x5f\x2f\x20\x2f\x20\x5f\x5f\x2f\x20\x5f\x20\x5c\x2f\x20\x5f\x5f\x5f\x2f\x0a\x20\x28\x5f\x5f\x20\x20\x29\x20\x2f\x5f\x2f\x20\x2f\x20\x2f\x5f\x2f\x5f\x5f\x5f\x5f\x5f\x2f\x20\x2f\x20\x2f\x20\x2f\x20\x2f\x20\x2f\x20\x2f\x20\x2f\x5f\x5f\x2f\x20\x2f\x20\x20\x2f\x20\x2f\x5f\x2f\x20\x28\x5f\x5f\x20\x20\x29\x20\x2f\x20\x2f\x5f\x2f\x20\x20\x5f\x5f\x28\x5f\x5f\x20\x20\x29\x0a\x2f\x5f\x5f\x5f\x5f\x2f\x5f\x2e\x5f\x5f\x5f\x2f\x5c\x5f\x5f\x2f\x20\x20\x20\x20\x20\x2f\x5f\x2f\x20\x2f\x5f\x2f\x20\x2f\x5f\x2f\x5f\x2f\x5c\x5f\x5f\x5f\x2f\x5f\x2f\x20\x20\x20\x5c\x5f\x5f\x5f\x5f\x2f\x5f\x5f\x5f\x5f\x2f\x5f\x2f\x5c\x5f\x5f\x2f\x5c\x5f\x5f\x5f\x2f\x5f\x5f\x5f\x5f\x2f\x0a\x0a\x68\x74\x74\x70\x73\x3a\x2f\x2f\x34\x37\x64\x65\x67\x2e\x67\x69\x74\x68\x75\x62\x2e\x69\x6f\x2f\x73\x62\x74\x2d\x6d\x69\x63\x72\x6f\x73\x69\x74\x65\x73')</script><script>((window.gitter = {}).chat = {}).options = {
+room: 'neotypes/neotypes'};</script><script src="https://sidecar.gitter.im/dist/sidecar.v1.js"></script><script src="/neotypes/js/version-selector.js"></script></body></html>

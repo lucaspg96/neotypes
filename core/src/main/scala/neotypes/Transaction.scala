@@ -8,8 +8,9 @@ import internal.syntax.stage._
 import mappers.{ExecutionMapper, ResultMapper}
 import types.QueryParam
 
-import org.neo4j.driver.v1.exceptions.NoSuchRecordException
-import org.neo4j.driver.v1.{Record, Transaction => NTransaction, Value}
+import org.neo4j.driver.exceptions.NoSuchRecordException
+import org.neo4j.driver.{Record, Value}
+import org.neo4j.driver.async.{AsyncTransaction => NTransaction}
 
 import scala.collection.compat._
 import scala.jdk.CollectionConverters._

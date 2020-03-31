@@ -2,8 +2,7 @@ package neotypes
 
 import internal.syntax.async._
 import internal.syntax.stage._
-
-import org.neo4j.driver.v1.{AccessMode, Driver => NDriver}
+import org.neo4j.driver.{AccessMode, Bookmark, SessionConfig, Driver => NDriver}
 
 import scala.jdk.CollectionConverters._
 
@@ -15,14 +14,13 @@ import scala.jdk.CollectionConverters._
   *
   * @param driver neo4j driver
   * @tparam F effect type for driver
-  *
   * @define futinfo When your effect type is scala.Future there is no concept of Resource. For more information see <a href = https://neotypes.github.io/neotypes/docs/alternative_effects.html>alternative effects</a>
   */
 final class Driver[F[_]](private val driver: NDriver) extends AnyVal {
 
   /** Acquire a session to the database in read mode
-    * @note $futinfo
     *
+    * @note $futinfo
     * @param F asynchronous effect type with resource type defined
     * @tparam R resource type dependant on effect type F
     * @return Session[F] in effect type R
@@ -31,11 +29,11 @@ final class Driver[F[_]](private val driver: NDriver) extends AnyVal {
     session[R](accessMode = AccessMode.READ)
 
   /** Acquire a session to the database in read or write mode
-    * @note $futinfo
     *
+    * @note $futinfo
     * @param accessMode read or write mode
-    * @param bookmarks bookmarks passed between transactions for neo4j casual chaining
-    * @param F asynchronous effect type with resource type defined
+    * @param bookmarks  bookmarks passed between transactions for neo4j casual chaining
+    * @param F          asynchronous effect type with resource type defined
     * @tparam R resource type dependant on effect type F
     * @return Session[F] in effect type R
     */
@@ -45,17 +43,16 @@ final class Driver[F[_]](private val driver: NDriver) extends AnyVal {
 
   private[this] def createSession(accessMode: AccessMode, bookmarks: Seq[String] = Seq.empty): Session[F] =
     new Session(
-      bookmarks match {
-        case Seq()         => driver.session(accessMode)
-        case Seq(bookmark) => driver.session(accessMode, bookmark)
-        case _             => driver.session(accessMode, bookmarks.asJava)
-      }
+      driver.asyncSession(SessionConfig.builder()
+        .withDefaultAccessMode(accessMode)
+        .withBookmarks(Bookmark.from(bookmarks.toSet.asJava))
+        .build())
     )
 
   /** Apply a unit of work to a read session
     *
     * @param sessionWork function that takes a Session[F] and returns an F[T]
-    * @param F the effect type
+    * @param F           the effect type
     * @tparam T the type of the value that will be returned when the query is executed.
     * @return an effect F of type T
     */
@@ -66,7 +63,7 @@ final class Driver[F[_]](private val driver: NDriver) extends AnyVal {
   /** Apply a unit to a write session
     *
     * @param sessionWork function that takes a Session[F] and returns an F[T]
-    * @param F the effect type
+    * @param F           the effect type
     * @tparam T the type of the value that will be returned when the query is executed.
     * @return an effect F of type T
     */
